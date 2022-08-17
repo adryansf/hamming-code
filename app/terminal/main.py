@@ -7,12 +7,12 @@ from app.verify import run as verify_run
 def run():
     option = 0
     while (option != '3'):
-        print('..:: GERADOR E VERIFICADOR DE CÓDIGO DE HAMMING ::..')
-        print('Digite o que você deseja fazer:')
+        print('..:: GERADOR E VERIFICADOR DE CODIGO DE HAMMING ::..')
+        print('Digite o que voce deseja fazer:')
         print("1) Enviar um grupo de bits")
         print('2) Verificar um grupo de bits recebido')
         print('3) Sair')
-        option = input('Opção: ')
+        option = input('Opçao: ')
         if (option != '3' and option != '1' and option != '2'):
             print('Opção inválida!')
         if (option == '1'):
@@ -37,7 +37,7 @@ def send_option():
             result = send_run(bits)
             print(send_message(bits, result))
         else:
-            print('Bits inválidos! Tente novamente!')
+            print('Bits invalidos! Tente novamente!')
 
 
 def verify_option():
@@ -55,8 +55,8 @@ def verify_option():
             if (result["incorrect_pos"] != -1):
                 print(incorrect_pos_message(result["incorrect_pos"], bits))
             else:
-                print("Não foi detectado erros!")
+                print("Nao foi detectado erros!")
             print(verify_message(result["original_bits"]))
         else:
-            print('Bits inválidos! Tente novamente!')
+            print('Bits invalidos! Tente novamente!')
     pass

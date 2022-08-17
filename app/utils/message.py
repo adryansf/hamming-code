@@ -1,5 +1,5 @@
 def send_message(data, result):
-    return f'Dados Originais: {data}\nDados que serão enviados: {result}'
+    return f'Dados Originais: {data}\nDados que serao enviados: {result}'
 
 
 def verify_message(result):

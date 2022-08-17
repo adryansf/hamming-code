@@ -14,7 +14,7 @@ from app.verify import run as run_verify
 class Interface:
     def __init__(self):
         window = Tk()
-        window.geometry("500x200")
+        window.geometry("600x230")
         window.resizable(False, False)
         window.title('CÓDIGO DE HAMMING')
 

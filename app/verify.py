@@ -42,7 +42,8 @@ def run(value):
                 incorrect_pos = 0
             incorrect_pos += pow(2, index)
 
-    bits[incorrect_pos-1] = int(not bits[incorrect_pos-1])
+    if (incorrect_pos >= 0):
+        bits[incorrect_pos-1] = int(not bits[incorrect_pos-1])
 
     for i in range(k):
         parity_pos.append(pow(2, i) - 1)
@@ -51,8 +52,10 @@ def run(value):
         if index not in parity_pos:
             original_bits.append(bit)
 
+    original_bits = ''.join(str(b) for b in original_bits)
+
     return {
         "incorrect_pos": incorrect_pos,
         "bits": bits,
-        "original_bits": ''.join(str(b) for b in original_bits)
+        "original_bits": original_bits,
     }
